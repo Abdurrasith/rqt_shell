@@ -48,6 +48,7 @@ def is_string(s):
 
 
 class SpyderShellWidget(ExternalShellBase):
+
     """Spyder Shell Widget: execute a shell in a separate process using spyderlib's ExternalShellBase"""
     SHELL_CLASS = TerminalWidget
     close_signal = Signal()
@@ -63,7 +64,7 @@ class SpyderShellWidget(ExternalShellBase):
         self.setObjectName('SpyderShellWidget')
 
         # capture tab key
-        #self.shell._key_tab = self._key_tab
+        # self.shell._key_tab = self._key_tab
 
         self.shell.set_pythonshell_font(QFont('Mono'))
 

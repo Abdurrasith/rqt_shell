@@ -67,6 +67,7 @@ class XTermWidget(QX11EmbedContainer):
 def is_xterm_available():
     return os.path.isfile(XTermWidget.xterm_cmd)
 
+
 if __name__ == '__main__':
     from PyQt4.QtGui import QApplication
     app = QApplication([])

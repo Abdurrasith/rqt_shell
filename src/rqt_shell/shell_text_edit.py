@@ -43,7 +43,8 @@ class ShellTextEdit(ConsoleTextEdit):
 
     def _exec_code(self, code):
         try:
-            self._pipe = subprocess.Popen([code], shell=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+            self._pipe = subprocess.Popen(
+                [code], shell=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
             out, err = self._pipe.communicate()
             self._stdout.write(out)
             self._stderr.write(err)
